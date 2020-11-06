@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">hmdywopApp</string>
+    <string name="app_title">How much do you weigh on planets?</string>
+    <string name="weigh_hint">What is your weight in the world</string>
+</resources>
