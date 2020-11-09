@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
+import org.w3c.dom.Text
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        
         val chechBoxVenus = findViewById<CheckBox>(R.id.checkBoxVenus)
         val chechBoxMars = findViewById<CheckBox>(R.id.checkBoxMars)
         val chechBoxJupiter = findViewById<CheckBox>(R.id.checkBoxJupiter)
@@ -31,7 +32,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         chechBoxMars.setOnClickListener(this)
         chechBoxJupiter.setOnClickListener(this)
 
-       // userWeight = findViewById<EditText>(R.id.editTextWeight).text.toString()
+     //  val userWeightv = findViewById<EditText>(R.id.editTextWeight).text.toString()
 
         val calculateButton = findViewById<Button>(R.id.buttonCalculate)
 
@@ -66,7 +67,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         var userPound = kiloToPound(userWeight)
 
 
+        if (!TextUtils.isEmpty(userWeight.toString())){
 
+        }
 
         when(v.id){
             R.id.checkBoxMars -> if(isChecked && !TextUtils.isEmpty(userWeight.toString())){
